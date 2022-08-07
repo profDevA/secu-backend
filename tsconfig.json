@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2017",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist", // Compiled Output Directory
+    "rootDir": "./src",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.js", // Every js file inside src folder
+    "src/**/*.ts", // Every ts file inside src folder
+  ],
+  "exclude": [
+    "node_modules",
+    ".serverless", // Exclude serverless directory
+    "dist" // Exclude compiled output by Typescript compiler
+  ]
+}

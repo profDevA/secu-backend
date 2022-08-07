@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models").default;
 const Customer = db.customers;
 
 // Create and Save a new Customer
