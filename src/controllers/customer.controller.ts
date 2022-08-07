@@ -2,7 +2,7 @@ import httpStatus from "http-status";
 import { Request, Response } from "express";
 import { catchAsync, pick } from "../utils";
 import { IOptions } from "../modules/paginate/paginate";
-import * as customerService from "../services/customer.service";
+import { customerService } from "../services";
 import mongoose from "mongoose";
 import { ApiError } from "../modules/errors";
 
@@ -14,7 +14,7 @@ export const createCustomer = catchAsync(
 );
 
 export const getCustomers = catchAsync(async (req: Request, res: Response) => {
-  const filter = pick(req.query, ["name", "role"]);
+  const filter = pick(req.query, ["name"]);
   const options: IOptions = pick(req.query, [
     "sortBy",
     "limit",

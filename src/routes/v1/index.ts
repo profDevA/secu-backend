@@ -1,5 +1,6 @@
 import express, { Router } from "express";
 import customerRoute from "./customer.routes";
+import fundRoute from "./fund.routes";
 
 const router = express.Router();
 
@@ -12,6 +13,10 @@ const defaultIRoute: IRoute[] = [
   {
     path: "/customers",
     route: customerRoute,
+  },
+  {
+    path: "/funds",
+    route: fundRoute,
   },
 ];
 
